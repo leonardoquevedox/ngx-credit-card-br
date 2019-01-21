@@ -7,13 +7,13 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
-import { NgxCreditCardComponent } from './ngx-credit-card-br.component'
+import { NgxCreditCardBrComponent } from './ngx-credit-card-br.component'
 
-export const Component = [NgxCreditCardComponent];
+export const Component = [NgxCreditCardBrComponent];
 
 @NgModule({
     imports: [CommonModule, FormsModule],
     declarations: [Component],
     exports: [Component]
 })
-export class NgxCreditCardModule { }
+export class NgxCreditCardBrModule { }

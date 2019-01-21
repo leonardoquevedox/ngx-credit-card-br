@@ -6,7 +6,7 @@
  */
 import { ChangeDetectorRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
-export declare class NgxCreditCardComponent {
+export declare class NgxCreditCardBrComponent {
     private changeDetector;
     expirationMonths: Array<any>;
     expirationYears: Array<any>;

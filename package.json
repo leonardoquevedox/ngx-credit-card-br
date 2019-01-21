@@ -1,7 +1,7 @@
 {
-    "name": "ngx-bank-account-br",
-    "version": "0.9.1",
-    "description": "Address autocomplete directive for Angular.io (2+).",
+    "name": "ngx-credit-card-br",
+    "version": "0.9.3",
+    "description": "Simple credit card component for Angular.io (2+).",
     "main": "index.js",
     "scripts": {
         "ng": "ng",
@@ -11,11 +11,12 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "prepublish": "npm run packagr",
+        "publish": "npm publish dist",
         "packagr": "ng-packagr -p ng-package.json"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/leopq/ngx-bank-account-br.git"
+        "url": "git+https://github.com/leopq/ngx-credit-card-br.git"
     },
     "keywords": [
         "angular",
@@ -27,9 +28,9 @@
     "author": "Leonardo Quevedo",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/leopq/ngx-bank-account-br/issues"
+        "url": "https://github.com/leopq/ngx-credit-card-br/issues"
     },
-    "homepage": "https://github.com/leopq/ngx-bank-account-br#readme",
+    "homepage": "https://github.com/leopq/ngx-credit-card-br#readme",
     "dependencies": {
         "@angular/common": "^7.1.3",
         "@angular/core": "^7.1.3",

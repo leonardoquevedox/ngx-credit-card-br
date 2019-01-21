@@ -17,7 +17,7 @@ const moment = moment_
     styleUrls: ['ngx-credit-card-br.component.scss'],
     changeDetection: ChangeDetectionStrategy.Default
 })
-export class NgxCreditCardComponent {
+export class NgxCreditCardBrComponent {
     expirationMonths: Array<any>
     expirationYears: Array<any>
     availableBrands: Array<any>

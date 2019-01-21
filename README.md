@@ -26,7 +26,7 @@ import { NgxCreditCardBr } from 'ngx-credit-card-br'
 @NgModule({
   (...)
   imports: [
-    NgxCreditCardBr.forRoot()
+    NgxCreditCardBr
   ]
   (...)
 })
@@ -36,11 +36,7 @@ import { NgxCreditCardBr } from 'ngx-credit-card-br'
 
 In your template, you can declare the ngx-credit-card-br as the following:
 ```html
-<form>
-    <!-- Input with the CPF validator -->
-    <input type="tel" ngx-cnpj [(ngModel)]="user.cnpj" name="userCnpj" #cnpjInput >
-</form>
-
+[WIP]
 ```
 
 ### And that's all there is about it.

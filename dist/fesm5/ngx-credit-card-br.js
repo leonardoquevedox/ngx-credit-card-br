@@ -1,27 +1,23 @@
+import { __awaiter, __generator } from 'tslib';
+import * as moment_ from 'moment-mini';
+import { ChangeDetectorRef, Component, Input, ViewChild, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-import * as tslib_1 from "tslib";
-/**
- * @license MIT
- * @version 1.1.0
- * @author Leonardo Quevedo
- * @description Credit card component.
- */
-import { ChangeDetectorRef, Component, Input, ViewChild, ChangeDetectionStrategy } from '@angular/core';
-import * as moment_ from 'moment-mini';
-import { NgForm } from '@angular/forms';
 /** @type {?} */
 var moment = moment_;
-var NgxCreditCardComponent = /** @class */ (function () {
-    function NgxCreditCardComponent(changeDetector) {
+var NgxCreditCardBrComponent = /** @class */ (function () {
+    function NgxCreditCardBrComponent(changeDetector) {
         this.changeDetector = changeDetector;
     }
     /**
      * @return {?}
      */
-    NgxCreditCardComponent.prototype.ngOnInit = /**
+    NgxCreditCardBrComponent.prototype.ngOnInit = /**
      * @return {?}
      */
     function () {
@@ -31,7 +27,7 @@ var NgxCreditCardComponent = /** @class */ (function () {
      * @param {?} phone
      * @return {?}
      */
-    NgxCreditCardComponent.prototype.getPhoneMask = /**
+    NgxCreditCardBrComponent.prototype.getPhoneMask = /**
      * @param {?} phone
      * @return {?}
      */
@@ -42,7 +38,7 @@ var NgxCreditCardComponent = /** @class */ (function () {
      * @param {?} documentType
      * @return {?}
      */
-    NgxCreditCardComponent.prototype.getDocumentMask = /**
+    NgxCreditCardBrComponent.prototype.getDocumentMask = /**
      * @param {?} documentType
      * @return {?}
      */
@@ -52,13 +48,13 @@ var NgxCreditCardComponent = /** @class */ (function () {
     /**
      * @return {?}
      */
-    NgxCreditCardComponent.prototype.initExpirationOptions = /**
+    NgxCreditCardBrComponent.prototype.initExpirationOptions = /**
      * @return {?}
      */
     function () {
-        return tslib_1.__awaiter(this, void 0, void 0, function () {
+        return __awaiter(this, void 0, void 0, function () {
             var expiration, month, year;
-            return tslib_1.__generator(this, function (_a) {
+            return __generator(this, function (_a) {
                 expiration = {
                     months: [],
                     years: []
@@ -80,14 +76,14 @@ var NgxCreditCardComponent = /** @class */ (function () {
      * @param {?} num
      * @return {?}
      */
-    NgxCreditCardComponent.prototype.pad = /**
+    NgxCreditCardBrComponent.prototype.pad = /**
      * @param {?} num
      * @return {?}
      */
     function (num) {
         return (num < 10) ? '0' + num.toString() : num.toString();
     };
-    NgxCreditCardComponent.decorators = [
+    NgxCreditCardBrComponent.decorators = [
         { type: Component, args: [{
                     selector: 'ngx-credit-card',
                     template: "<article credit-card max-width-container *ngIf=\"card\">\n    <article card-back>\n        <section card-stripe></section>\n    </article>\n    <article card-front>\n        <form #cardForm=\"ngForm\" *ngIf=\"!showBack\">\n            <label>\n                N\u00FAmero do cart\u00E3o\n            </label>\n            <input required type=\"text\" autocomplete=\"cc-number\" card-number name=\"cardNumber\" mask=\"9999 9999 9999 9999\"\n                [(ngModel)]=\"card.number\" placeholder=\"1234 5678 9101 1112\" length=\"16\">\n            <section cardholder-container>\n                <label>\n                    Nome do titular\n                </label>\n                <input required type=\"text\" autocomplete=\"cc-name\" card-holder name=\"holderName\" [(ngModel)]=\"card.holder.name\"\n                    placeholder=\"Ada Lovelace\" />\n            </section>\n\n            <section exp-container>\n                <label>\n                    Validade\n                </label>\n                <select required card-month name=\"expMonth\" [(ngModel)]=\"card.expirationMonth\" autocomplete=\"cc-exp-month\">\n                    <option *ngFor=\"let month of expirationMonths; let index = index;\" [value]=\"month\" [selected]=\"index == 0\">\n                        {{month}}\n                    </option>\n                </select>\n                <select required card-year name=\"expYear\" [(ngModel)]=\"card.expirationYear\" autocomplete=\"cc-exp-year\">\n                    <option *ngFor=\"let year of expirationYears; let index = index;\" [value]=\"year\" [selected]=\"index == 0\">\n                        {{year}}\n                    </option>\n                </select>\n            </section>\n\n            <section cvc-container>\n                <label for=\"card-cvc\">\n                    CVV:\n                </label>\n                <input required card-cvc autocomplete=\"cc-csc\" placeholder=\"XXXX\" name=\"cardCvv\" [(ngModel)]=\"card.cvv\"\n                    type=\"text\" min-length=\"3\" max-length=\"4\">\n                <p>\n                    <span>\n                    </span>\n                </p>\n            </section>\n        </form>\n    </article>\n</article>",
@@ -96,33 +92,45 @@ var NgxCreditCardComponent = /** @class */ (function () {
                 }] }
     ];
     /** @nocollapse */
-    NgxCreditCardComponent.ctorParameters = function () { return [
+    NgxCreditCardBrComponent.ctorParameters = function () { return [
         { type: ChangeDetectorRef }
     ]; };
-    NgxCreditCardComponent.propDecorators = {
+    NgxCreditCardBrComponent.propDecorators = {
         card: [{ type: Input, args: ['card',] }],
         form: [{ type: ViewChild, args: ['cardForm',] }]
     };
-    return NgxCreditCardComponent;
+    return NgxCreditCardBrComponent;
 }());
-export { NgxCreditCardComponent };
-if (false) {
-    /** @type {?} */
-    NgxCreditCardComponent.prototype.expirationMonths;
-    /** @type {?} */
-    NgxCreditCardComponent.prototype.expirationYears;
-    /** @type {?} */
-    NgxCreditCardComponent.prototype.availableBrands;
-    /** @type {?} */
-    NgxCreditCardComponent.prototype.showBack;
-    /** @type {?} */
-    NgxCreditCardComponent.prototype.card;
-    /** @type {?} */
-    NgxCreditCardComponent.prototype.form;
-    /**
-     * @type {?}
-     * @private
-     */
-    NgxCreditCardComponent.prototype.changeDetector;
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LWNyZWRpdC1jYXJkLWJyLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC1iYW5rLWFjY291bnQtYnIvIiwic291cmNlcyI6WyJuZ3gtY3JlZGl0LWNhcmQtYnIuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBT0EsT0FBTyxFQUFFLGlCQUFpQixFQUFFLFNBQVMsRUFBRSxLQUFLLEVBQUUsU0FBUyxFQUFFLHVCQUF1QixFQUFFLE1BQU0sZUFBZSxDQUFBO0FBQ3ZHLE9BQU8sS0FBSyxPQUFPLE1BQU0sYUFBYSxDQUFBO0FBQ3RDLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQTs7SUFFakMsTUFBTSxHQUFHLE9BQU87QUFFdEI7SUFjSSxnQ0FBb0IsY0FBaUM7UUFBakMsbUJBQWMsR0FBZCxjQUFjLENBQW1CO0lBQUksQ0FBQzs7OztJQUUxRCx5Q0FBUTs7O0lBQVI7UUFDSSxJQUFJLENBQUMscUJBQXFCLEVBQUUsQ0FBQTtJQUNoQyxDQUFDOzs7OztJQUVELDZDQUFZOzs7O0lBQVosVUFBYSxLQUFLO1FBQ2QsT0FBTyxDQUFDLEtBQUssSUFBSSxLQUFLLENBQUMsTUFBTSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxpQkFBaUIsQ0FBQyxDQUFDLENBQUMsZ0JBQWdCLENBQUE7SUFDOUUsQ0FBQzs7Ozs7SUFFRCxnREFBZTs7OztJQUFmLFVBQWdCLFlBQW9CO1FBQ2hDLE9BQU8sWUFBWSxJQUFJLE1BQU0sQ0FBQyxDQUFDLENBQUMsb0JBQW9CLENBQUMsQ0FBQyxDQUFDLGdCQUFnQixDQUFBO0lBQzNFLENBQUM7Ozs7SUFFSyxzREFBcUI7OztJQUEzQjs7OztnQkFDUSxVQUFVLEdBQUc7b0JBQ2IsTUFBTSxFQUFFLEVBQUU7b0JBQ1YsS0FBSyxFQUFFLEVBQUU7aUJBQ1o7Z0JBQ0QsS0FBUyxLQUFLLEdBQUcsQ0FBQyxFQUFFLEtBQUssSUFBSSxFQUFFLEVBQUUsS0FBSyxFQUFFLEVBQUU7b0JBQ3RDLFVBQVUsQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQTtpQkFDMUM7Z0JBQ0QsS0FBUyxJQUFJLEdBQUcsQ0FBQyxFQUFFLElBQUksSUFBSSxFQUFFLEVBQUUsSUFBSSxFQUFFLEVBQUU7b0JBQ25DLFVBQVUsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEVBQUUsT0FBTyxDQUFDLENBQUMsTUFBTSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUE7aUJBQ3BFO2dCQUNELElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxVQUFVLENBQUMsTUFBTSxDQUFBO2dCQUN6QyxJQUFJLENBQUMsZUFBZSxHQUFHLFVBQVUsQ0FBQyxLQUFLLENBQUE7Z0JBQ3ZDLElBQUksQ0FBQyxjQUFjLENBQUMsYUFBYSxFQUFFLENBQUE7Ozs7S0FDdEM7Ozs7O0lBRUQsb0NBQUc7Ozs7SUFBSCxVQUFJLEdBQUc7UUFDSCxPQUFPLENBQUMsR0FBRyxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsUUFBUSxFQUFFLENBQUE7SUFDN0QsQ0FBQzs7Z0JBOUNKLFNBQVMsU0FBQztvQkFDUCxRQUFRLEVBQUUsaUJBQWlCO29CQUMzQix3c0VBQWdEO29CQUVoRCxlQUFlLEVBQUUsdUJBQXVCLENBQUMsT0FBTzs7aUJBQ25EOzs7O2dCQVhRLGlCQUFpQjs7O3VCQWlCckIsS0FBSyxTQUFDLE1BQU07dUJBQ1osU0FBUyxTQUFDLFVBQVU7O0lBbUN6Qiw2QkFBQztDQUFBLEFBL0NELElBK0NDO1NBekNZLHNCQUFzQjs7O0lBQy9CLGtEQUE0Qjs7SUFDNUIsaURBQTJCOztJQUMzQixpREFBMkI7O0lBQzNCLDBDQUFpQjs7SUFDakIsc0NBQXdCOztJQUN4QixzQ0FBbUM7Ozs7O0lBRXZCLGdEQUF5QyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2UgTUlUXG4gKiBAdmVyc2lvbiAxLjEuMFxuICogQGF1dGhvciBMZW9uYXJkbyBRdWV2ZWRvXG4gKiBAZGVzY3JpcHRpb24gQ3JlZGl0IGNhcmQgY29tcG9uZW50LlxuICovXG5cbmltcG9ydCB7IENoYW5nZURldGVjdG9yUmVmLCBDb21wb25lbnQsIElucHV0LCBWaWV3Q2hpbGQsIENoYW5nZURldGVjdGlvblN0cmF0ZWd5IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSdcbmltcG9ydCAqIGFzIG1vbWVudF8gZnJvbSAnbW9tZW50LW1pbmknXG5pbXBvcnQgeyBOZ0Zvcm0gfSBmcm9tICdAYW5ndWxhci9mb3JtcydcblxuY29uc3QgbW9tZW50ID0gbW9tZW50X1xuXG5AQ29tcG9uZW50KHtcbiAgICBzZWxlY3RvcjogJ25neC1jcmVkaXQtY2FyZCcsXG4gICAgdGVtcGxhdGVVcmw6ICduZ3gtY3JlZGl0LWNhcmQtYnIuY29tcG9uZW50Lmh0bWwnLFxuICAgIHN0eWxlVXJsczogWyduZ3gtY3JlZGl0LWNhcmQtYnIuY29tcG9uZW50LnNjc3MnXSxcbiAgICBjaGFuZ2VEZXRlY3Rpb246IENoYW5nZURldGVjdGlvblN0cmF0ZWd5LkRlZmF1bHRcbn0pXG5leHBvcnQgY2xhc3MgTmd4Q3JlZGl0Q2FyZENvbXBvbmVudCB7XG4gICAgZXhwaXJhdGlvbk1vbnRoczogQXJyYXk8YW55PlxuICAgIGV4cGlyYXRpb25ZZWFyczogQXJyYXk8YW55PlxuICAgIGF2YWlsYWJsZUJyYW5kczogQXJyYXk8YW55PlxuICAgIHNob3dCYWNrOiBib29sZWFuXG4gICAgQElucHV0KCdjYXJkJykgY2FyZDogYW55XG4gICAgQFZpZXdDaGlsZCgnY2FyZEZvcm0nKSBmb3JtOiBOZ0Zvcm1cblxuICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgY2hhbmdlRGV0ZWN0b3I6IENoYW5nZURldGVjdG9yUmVmKSB7IH1cblxuICAgIG5nT25Jbml0KCkge1xuICAgICAgICB0aGlzLmluaXRFeHBpcmF0aW9uT3B0aW9ucygpXG4gICAgfVxuXG4gICAgZ2V0UGhvbmVNYXNrKHBob25lKSB7XG4gICAgICAgIHJldHVybiAocGhvbmUgJiYgcGhvbmUubGVuZ3RoID4gMTQpID8gJyg5OSkgOTk5OTktOTk5OScgOiAnKDk5KSA5OTk5LTk5OTknXG4gICAgfVxuXG4gICAgZ2V0RG9jdW1lbnRNYXNrKGRvY3VtZW50VHlwZTogc3RyaW5nKSB7XG4gICAgICAgIHJldHVybiBkb2N1bWVudFR5cGUgPT0gJ0NOUEonID8gJzk5Ljk5OS45OTkvOTk5OS05OScgOiAnOTk5Ljk5OS45OTktOTknXG4gICAgfVxuXG4gICAgYXN5bmMgaW5pdEV4cGlyYXRpb25PcHRpb25zKCkge1xuICAgICAgICBsZXQgZXhwaXJhdGlvbiA9IHtcbiAgICAgICAgICAgIG1vbnRoczogW10sXG4gICAgICAgICAgICB5ZWFyczogW11cbiAgICAgICAgfVxuICAgICAgICBmb3IgKGxldCBtb250aCA9IDE7IG1vbnRoIDw9IDEyOyBtb250aCsrKSB7XG4gICAgICAgICAgICBleHBpcmF0aW9uLm1vbnRocy5wdXNoKHRoaXMucGFkKG1vbnRoKSlcbiAgICAgICAgfVxuICAgICAgICBmb3IgKGxldCB5ZWFyID0gMDsgeWVhciA8PSAzMDsgeWVhcisrKSB7XG4gICAgICAgICAgICBleHBpcmF0aW9uLnllYXJzLnB1c2gobW9tZW50KCkuYWRkKHllYXIsICd5ZWFycycpLmZvcm1hdCgnWVlZWScpKVxuICAgICAgICB9XG4gICAgICAgIHRoaXMuZXhwaXJhdGlvbk1vbnRocyA9IGV4cGlyYXRpb24ubW9udGhzXG4gICAgICAgIHRoaXMuZXhwaXJhdGlvblllYXJzID0gZXhwaXJhdGlvbi55ZWFyc1xuICAgICAgICB0aGlzLmNoYW5nZURldGVjdG9yLmRldGVjdENoYW5nZXMoKVxuICAgIH1cblxuICAgIHBhZChudW0pIHtcbiAgICAgICAgcmV0dXJuIChudW0gPCAxMCkgPyAnMCcgKyBudW0udG9TdHJpbmcoKSA6IG51bS50b1N0cmluZygpXG4gICAgfVxufVxuIl19
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+var Component$1 = [NgxCreditCardBrComponent];
+var NgxCreditCardBrModule = /** @class */ (function () {
+    function NgxCreditCardBrModule() {
+    }
+    NgxCreditCardBrModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [CommonModule, FormsModule],
+                    declarations: [Component$1],
+                    exports: [Component$1]
+                },] }
+    ];
+    return NgxCreditCardBrModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+export { NgxCreditCardBrComponent, NgxCreditCardBrModule, Component$1 as ɵa };
+
+//# sourceMappingURL=ngx-credit-card-br.js.map

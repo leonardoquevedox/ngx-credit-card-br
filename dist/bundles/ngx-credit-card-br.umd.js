@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/forms'), require('@angular/core'), require('moment-mini')) :
-    typeof define === 'function' && define.amd ? define('ngx-bank-account-br', ['exports', '@angular/common', '@angular/forms', '@angular/core', 'moment-mini'], factory) :
-    (factory((global['ngx-bank-account-br'] = {}),global.ng.common,global.ng.forms,global.ng.core,global.moment_));
-}(this, (function (exports,common,forms,core,moment_) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('moment-mini'), require('@angular/core'), require('@angular/common'), require('@angular/forms')) :
+    typeof define === 'function' && define.amd ? define('ngx-credit-card-br', ['exports', 'moment-mini', '@angular/core', '@angular/common', '@angular/forms'], factory) :
+    (factory((global['ngx-credit-card-br'] = {}),global.moment_,global.ng.core,global.ng.common,global.ng.forms));
+}(this, (function (exports,moment_,core,common,forms) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -112,14 +112,14 @@
      */
     /** @type {?} */
     var moment = moment_;
-    var NgxCreditCardComponent = /** @class */ (function () {
-        function NgxCreditCardComponent(changeDetector) {
+    var NgxCreditCardBrComponent = /** @class */ (function () {
+        function NgxCreditCardBrComponent(changeDetector) {
             this.changeDetector = changeDetector;
         }
         /**
          * @return {?}
          */
-        NgxCreditCardComponent.prototype.ngOnInit = /**
+        NgxCreditCardBrComponent.prototype.ngOnInit = /**
          * @return {?}
          */
             function () {
@@ -129,7 +129,7 @@
          * @param {?} phone
          * @return {?}
          */
-        NgxCreditCardComponent.prototype.getPhoneMask = /**
+        NgxCreditCardBrComponent.prototype.getPhoneMask = /**
          * @param {?} phone
          * @return {?}
          */
@@ -140,7 +140,7 @@
          * @param {?} documentType
          * @return {?}
          */
-        NgxCreditCardComponent.prototype.getDocumentMask = /**
+        NgxCreditCardBrComponent.prototype.getDocumentMask = /**
          * @param {?} documentType
          * @return {?}
          */
@@ -150,7 +150,7 @@
         /**
          * @return {?}
          */
-        NgxCreditCardComponent.prototype.initExpirationOptions = /**
+        NgxCreditCardBrComponent.prototype.initExpirationOptions = /**
          * @return {?}
          */
             function () {
@@ -178,14 +178,14 @@
          * @param {?} num
          * @return {?}
          */
-        NgxCreditCardComponent.prototype.pad = /**
+        NgxCreditCardBrComponent.prototype.pad = /**
          * @param {?} num
          * @return {?}
          */
             function (num) {
                 return (num < 10) ? '0' + num.toString() : num.toString();
             };
-        NgxCreditCardComponent.decorators = [
+        NgxCreditCardBrComponent.decorators = [
             { type: core.Component, args: [{
                         selector: 'ngx-credit-card',
                         template: "<article credit-card max-width-container *ngIf=\"card\">\n    <article card-back>\n        <section card-stripe></section>\n    </article>\n    <article card-front>\n        <form #cardForm=\"ngForm\" *ngIf=\"!showBack\">\n            <label>\n                N\u00FAmero do cart\u00E3o\n            </label>\n            <input required type=\"text\" autocomplete=\"cc-number\" card-number name=\"cardNumber\" mask=\"9999 9999 9999 9999\"\n                [(ngModel)]=\"card.number\" placeholder=\"1234 5678 9101 1112\" length=\"16\">\n            <section cardholder-container>\n                <label>\n                    Nome do titular\n                </label>\n                <input required type=\"text\" autocomplete=\"cc-name\" card-holder name=\"holderName\" [(ngModel)]=\"card.holder.name\"\n                    placeholder=\"Ada Lovelace\" />\n            </section>\n\n            <section exp-container>\n                <label>\n                    Validade\n                </label>\n                <select required card-month name=\"expMonth\" [(ngModel)]=\"card.expirationMonth\" autocomplete=\"cc-exp-month\">\n                    <option *ngFor=\"let month of expirationMonths; let index = index;\" [value]=\"month\" [selected]=\"index == 0\">\n                        {{month}}\n                    </option>\n                </select>\n                <select required card-year name=\"expYear\" [(ngModel)]=\"card.expirationYear\" autocomplete=\"cc-exp-year\">\n                    <option *ngFor=\"let year of expirationYears; let index = index;\" [value]=\"year\" [selected]=\"index == 0\">\n                        {{year}}\n                    </option>\n                </select>\n            </section>\n\n            <section cvc-container>\n                <label for=\"card-cvc\">\n                    CVV:\n                </label>\n                <input required card-cvc autocomplete=\"cc-csc\" placeholder=\"XXXX\" name=\"cardCvv\" [(ngModel)]=\"card.cvv\"\n                    type=\"text\" min-length=\"3\" max-length=\"4\">\n                <p>\n                    <span>\n                    </span>\n                </p>\n            </section>\n        </form>\n    </article>\n</article>",
@@ -194,16 +194,16 @@
                     }] }
         ];
         /** @nocollapse */
-        NgxCreditCardComponent.ctorParameters = function () {
+        NgxCreditCardBrComponent.ctorParameters = function () {
             return [
                 { type: core.ChangeDetectorRef }
             ];
         };
-        NgxCreditCardComponent.propDecorators = {
+        NgxCreditCardBrComponent.propDecorators = {
             card: [{ type: core.Input, args: ['card',] }],
             form: [{ type: core.ViewChild, args: ['cardForm',] }]
         };
-        return NgxCreditCardComponent;
+        return NgxCreditCardBrComponent;
     }());
 
     /**
@@ -211,18 +211,18 @@
      * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
     /** @type {?} */
-    var Component = [NgxCreditCardComponent];
-    var NgxCreditCardModule = /** @class */ (function () {
-        function NgxCreditCardModule() {
+    var Component = [NgxCreditCardBrComponent];
+    var NgxCreditCardBrModule = /** @class */ (function () {
+        function NgxCreditCardBrModule() {
         }
-        NgxCreditCardModule.decorators = [
+        NgxCreditCardBrModule.decorators = [
             { type: core.NgModule, args: [{
                         imports: [common.CommonModule, forms.FormsModule],
                         declarations: [Component],
                         exports: [Component]
                     },] }
         ];
-        return NgxCreditCardModule;
+        return NgxCreditCardBrModule;
     }());
 
     /**
@@ -235,12 +235,12 @@
      * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
 
-    exports.Component = Component;
-    exports.NgxCreditCardModule = NgxCreditCardModule;
-    exports.ɵa = NgxCreditCardComponent;
+    exports.NgxCreditCardBrComponent = NgxCreditCardBrComponent;
+    exports.NgxCreditCardBrModule = NgxCreditCardBrModule;
+    exports.ɵa = Component;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
 
-//# sourceMappingURL=ngx-bank-account-br.umd.js.map
+//# sourceMappingURL=ngx-credit-card-br.umd.js.map

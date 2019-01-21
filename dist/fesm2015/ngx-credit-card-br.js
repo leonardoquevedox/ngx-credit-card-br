@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
 import { __awaiter } from 'tslib';
-import { ChangeDetectorRef, Component, Input, ViewChild, ChangeDetectionStrategy, NgModule } from '@angular/core';
 import * as moment_ from 'moment-mini';
+import { ChangeDetectorRef, Component, Input, ViewChild, ChangeDetectionStrategy, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 /**
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
  */
 /** @type {?} */
 const moment = moment_;
-class NgxCreditCardComponent {
+class NgxCreditCardBrComponent {
     /**
      * @param {?} changeDetector
      */
@@ -66,7 +66,7 @@ class NgxCreditCardComponent {
         return (num < 10) ? '0' + num.toString() : num.toString();
     }
 }
-NgxCreditCardComponent.decorators = [
+NgxCreditCardBrComponent.decorators = [
     { type: Component, args: [{
                 selector: 'ngx-credit-card',
                 template: "<article credit-card max-width-container *ngIf=\"card\">\n    <article card-back>\n        <section card-stripe></section>\n    </article>\n    <article card-front>\n        <form #cardForm=\"ngForm\" *ngIf=\"!showBack\">\n            <label>\n                N\u00FAmero do cart\u00E3o\n            </label>\n            <input required type=\"text\" autocomplete=\"cc-number\" card-number name=\"cardNumber\" mask=\"9999 9999 9999 9999\"\n                [(ngModel)]=\"card.number\" placeholder=\"1234 5678 9101 1112\" length=\"16\">\n            <section cardholder-container>\n                <label>\n                    Nome do titular\n                </label>\n                <input required type=\"text\" autocomplete=\"cc-name\" card-holder name=\"holderName\" [(ngModel)]=\"card.holder.name\"\n                    placeholder=\"Ada Lovelace\" />\n            </section>\n\n            <section exp-container>\n                <label>\n                    Validade\n                </label>\n                <select required card-month name=\"expMonth\" [(ngModel)]=\"card.expirationMonth\" autocomplete=\"cc-exp-month\">\n                    <option *ngFor=\"let month of expirationMonths; let index = index;\" [value]=\"month\" [selected]=\"index == 0\">\n                        {{month}}\n                    </option>\n                </select>\n                <select required card-year name=\"expYear\" [(ngModel)]=\"card.expirationYear\" autocomplete=\"cc-exp-year\">\n                    <option *ngFor=\"let year of expirationYears; let index = index;\" [value]=\"year\" [selected]=\"index == 0\">\n                        {{year}}\n                    </option>\n                </select>\n            </section>\n\n            <section cvc-container>\n                <label for=\"card-cvc\">\n                    CVV:\n                </label>\n                <input required card-cvc autocomplete=\"cc-csc\" placeholder=\"XXXX\" name=\"cardCvv\" [(ngModel)]=\"card.cvv\"\n                    type=\"text\" min-length=\"3\" max-length=\"4\">\n                <p>\n                    <span>\n                    </span>\n                </p>\n            </section>\n        </form>\n    </article>\n</article>",
@@ -75,10 +75,10 @@ NgxCreditCardComponent.decorators = [
             }] }
 ];
 /** @nocollapse */
-NgxCreditCardComponent.ctorParameters = () => [
+NgxCreditCardBrComponent.ctorParameters = () => [
     { type: ChangeDetectorRef }
 ];
-NgxCreditCardComponent.propDecorators = {
+NgxCreditCardBrComponent.propDecorators = {
     card: [{ type: Input, args: ['card',] }],
     form: [{ type: ViewChild, args: ['cardForm',] }]
 };
@@ -88,10 +88,10 @@ NgxCreditCardComponent.propDecorators = {
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const Component$1 = [NgxCreditCardComponent];
-class NgxCreditCardModule {
+const Component$1 = [NgxCreditCardBrComponent];
+class NgxCreditCardBrModule {
 }
-NgxCreditCardModule.decorators = [
+NgxCreditCardBrModule.decorators = [
     { type: NgModule, args: [{
                 imports: [CommonModule, FormsModule],
                 declarations: [Component$1],
@@ -109,6 +109,6 @@ NgxCreditCardModule.decorators = [
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { Component$1 as Component, NgxCreditCardModule, NgxCreditCardComponent as ɵa };
+export { NgxCreditCardBrComponent, NgxCreditCardBrModule, Component$1 as ɵa };
 
-//# sourceMappingURL=ngx-bank-account-br.js.map
+//# sourceMappingURL=ngx-credit-card-br.js.map
