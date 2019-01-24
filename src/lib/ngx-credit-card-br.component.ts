@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms'
 const moment = moment_
 
 @Component({
-    selector: 'ngx-credit-card',
+    selector: 'ngx-credit-card-br',
     templateUrl: 'ngx-credit-card-br.component.html',
     styleUrls: ['ngx-credit-card-br.component.scss'],
     changeDetection: ChangeDetectionStrategy.Default

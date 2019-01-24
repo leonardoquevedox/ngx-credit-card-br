@@ -1,6 +1,6 @@
 {
   "name": "ngx-credit-card-br",
-  "version": "0.9.3",
+  "version": "0.9.9",
   "description": "Simple credit card component for Angular.io (2+).",
   "main": "bundles/ngx-credit-card-br.umd.js",
   "repository": {
