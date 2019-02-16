@@ -1,7 +1,7 @@
  $credit-card-color: #1e88e5;
  $secondary-cc-color: adjust-hue($credit-card-color, -40);
  [credit-card] {
-     padding-bottom: 25px;
+     padding-bottom: 2.5rem;
      max-width: 400px;
      margin: auto;
      * {
@@ -9,7 +9,7 @@
          transition-duration: .3s;
      }
      [card-cvc] {
-         width: 60px;
+         width: 6rem;
          margin-bottom: 0;
      }
      [card-front],
@@ -33,24 +33,24 @@
          min-width: 320px;
          max-width: 400px;
          min-height: 230px;
-         border-radius: 6px;
-         padding: 20px 30px 0;
-         font-size: 10px;
+         border-radius: 0.6rem;
+         padding: 2rem 3rem 0;
+         font-size: 1rem;
          letter-spacing: 1px;
          font-weight: 300;
          color: white;
-         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+         box-shadow: 1px 1px 0.2rem rgba(0, 0, 0, 0.2);
      }
      [card-front] {
          z-index: 999;
-         margin-top: -250px;
-         margin-left: -20px;
+         margin-top: -25rem;
+         margin-left: -2rem;
      }
      [card-back] {
          z-index: -2;
-         padding: 0px;
-         padding-top: 20px;
-         margin-right: -20px;
+         padding: 0rem;
+         padding-top: 2rem;
+         margin-right: -2rem;
      }
      [card-number],
      [card-holder] {
@@ -58,7 +58,7 @@
      }
      [card-stripe] {
          width: 100%;
-         height: 55px;
+         height: 5.5rem;
          background-color: rgba(0, 0, 0, 0.5);
          right: 0;
      }
@@ -82,33 +82,33 @@
          /* display: inline-block; */
      }
      [card-button] {
-         border: 2px solid white;
+         border: 0.2rem solid white;
          display: block;
-         padding: 10px;
+         padding: 1rem;
          color: white;
          float: right;
-         border-radius: 30px;
+         border-radius: 3rem;
          background-color: $credit-card-color;
      }
      [next-button] {
-         margin-top: 20px;
+         margin-top: 2rem;
      }
      [save-button] {
          border-radius: 50%;
          font-weight: bold;
-         margin-top: -10px;
+         margin-top: -1rem;
      }
      [card-brand] {
          float: left;
-         margin-left: 6px;
+         margin-left: 0.6rem;
      }
      [card-brand-select] {
-         width: 208px;
+         width: 20.8rem;
      }
      [card-brand-pic] {
          opacity: 0;
-         width: 42px;
-         height: 20px;
+         width: 4.2rem;
+         height: 2rem;
          &[visible=true] {
              opacity: 1;
          }
@@ -117,19 +117,19 @@
          width: 100%;
      }
      [cvc-container] p {
-         font-size: 8px;
+         font-size: 0.8rem;
          text-transform: uppercase;
-         letter-spacing: .5px;
+         letter-spacing: 0.05rem;
          color: white;
          font-weight: bold;
          span {
              max-width: 80px;
              display: inline-block;
-             padding-top: 5px;
+             padding-top: 0.5rem;
          }
      }
      [exp-container] {
-         margin-left: 10px;
+         margin-left: 1rem;
          width: 32%;
          display: inline-block;
      }
@@ -139,18 +139,18 @@
          outline: none;
          background-color: white;
          font-weight: bold;
-         height: 30px;
-         line-height: 30px;
-         padding: 0 10px;
-         margin: 0 0 8px;
+         height: 3rem;
+         line-height: 3rem;
+         padding: 0 1rem;
+         margin: 0 0 0.8rem;
          color: $credit-card-color;
-         font-size: 10px;
+         font-size: 1rem;
          box-sizing: border-box;
-         border-radius: 4px;
-         letter-spacing: .7px;
+         border-radius: 0.4rem;
+         letter-spacing: 0.07rem;
      }
      select {
-         padding: 0px;
+         padding: 0rem;
          text-align: center;
          option {
              background-color: white;
@@ -176,22 +176,22 @@
      }
      label {
          display: block;
-         margin: 0 auto 7px;
+         margin: 0 auto 0.7rem;
          color: white;
-         font-size: 10px;
+         font-size: 1rem;
          font-weight: bold;
          text-transform: uppercase;
      }
      [card-extra-info] {
          input {
-             margin-bottom: 0px;
+             margin-bottom: 0rem;
          }
          [field] {
              display: inline-block;
              margin-right: 1.5%;
              margin-left: 1.5%;
              width: 46%;
-             height: 60px;
+             height: 6rem;
              &[full-width] {
                  width: 100%;
              }
