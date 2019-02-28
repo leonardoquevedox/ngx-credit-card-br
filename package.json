@@ -1,47 +1,47 @@
 {
-    "name": "ngx-credit-card-br",
-    "version": "1.0.0-rc11",
-    "description": "Simple credit card component for Angular.io (2+).",
-    "main": "index.js",
-    "scripts": {
-        "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build",
-        "test": "ng test",
-        "lint": "ng lint",
-        "e2e": "ng e2e",
-        "prepublish": "npm run packagr",
-        "publish": "npm publish dist",
-        "packagr": "ng-packagr -p ng-package.json"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/leopq/ngx-credit-card-br.git"
-    },
-    "keywords": [
-        "angular",
-        "directive",
-        "ngx",
-        "dynamic",
-        "mask"
-    ],
-    "author": "Leonardo Quevedo",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/leopq/ngx-credit-card-br/issues"
-    },
-    "homepage": "https://github.com/leopq/ngx-credit-card-br#readme",
-    "dependencies": {
-        "@angular/common": "^6.0.7",
-        "@angular/core": "^6.0.7",
-        "@angular/forms": "^6.0.7",
-        "moment-mini": "^2.22.1"
-    },
-    "devDependencies": {
-        "@angular/compiler": "^6.0.7",
-        "@angular/compiler-cli": "^6.0.7",
-        "ng-packagr": "^4.7.0",
-        "tsickle": "^0.34.0",
-        "typescript": "^2.7.2"
-    }
+  "name": "ngx-credit-card-br",
+  "version": "1.0.0-rc12",
+  "description": "Simple credit card component for Angular.io (2+).",
+  "main": "index.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "prepublish": "npm run packagr",
+    "publish": "npm publish dist",
+    "packagr": "ng-packagr -p ng-package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leopq/ngx-credit-card-br.git"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "ngx",
+    "dynamic",
+    "mask"
+  ],
+  "author": "Leonardo Quevedo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leopq/ngx-credit-card-br/issues"
+  },
+  "homepage": "https://github.com/leopq/ngx-credit-card-br#readme",
+  "dependencies": {
+    "@angular/common": "^6.0.7",
+    "@angular/core": "^6.0.7",
+    "@angular/forms": "^6.0.7",
+    "moment-mini": "^2.22.1"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^6.0.7",
+    "@angular/compiler-cli": "^6.0.7",
+    "ng-packagr": "^4.7.0",
+    "tsickle": "^0.34.0",
+    "typescript": "^2.7.2"
+  }
 }

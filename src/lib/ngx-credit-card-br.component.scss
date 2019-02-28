@@ -1,215 +1,241 @@
- $credit-card-color: #1e88e5;
- $secondary-cc-color: adjust-hue($credit-card-color, -10);
- [credit-card] {
-     padding-bottom: 2.5rem;
-     max-width: 400px;
-     margin: auto;
-     * {
-         transition-property: all;
-         transition-duration: .3s;
-     }
-     [card-cvc] {
-         width: 6rem;
-         margin-bottom: 0;
-     }
-     [card-front],
-     [card-back] {
-         background: $credit-card-color;
-         /* Old browsers */
-         background: -moz-linear-gradient(top, $credit-card-color 0%, $secondary-cc-color 100%);
-         /* FF3.6+ */
-         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $credit-card-color), color-stop(100%, $secondary-cc-color));
-         /* Chrome,Safari4+ */
-         background: -webkit-linear-gradient(top, $credit-card-color 0%, $secondary-cc-color 100%);
-         /* Chrome10+,Safari5.1+ */
-         background: -o-linear-gradient(top, $credit-card-color 0%, $secondary-cc-color 100%);
-         /* Opera 11.10+ */
-         background: -ms-linear-gradient(top, $credit-card-color 0%, $secondary-cc-color 100%);
-         /* IE10+ */
-         background: linear-gradient(to bottom, $credit-card-color 0%, $secondary-cc-color 100%);
-         /* W3C */
-         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
-         /* IE6-9 */
-         min-width: 320px;
-         max-width: 400px;
-         min-height: 230px;
-         border-radius: 0.6rem;
-         padding: 2rem 3rem 0;
-         font-size: 1rem;
-         letter-spacing: 1px;
-         font-weight: 300;
-         color: white;
-         box-shadow: 1px 1px 0.2rem rgba(0, 0, 0, 0.2);
-     }
-     [card-front] {
-         z-index: 999;
-         margin-top: -25rem;
-         margin-left: -2rem;
-     }
-     [card-back] {
-         z-index: -2;
-         padding: 0rem;
-         padding-top: 2rem;
-         margin-right: -2rem;
-     }
-     [card-number],
-     [card-holder] {
-         width: 100%;
-     }
-     [card-stripe] {
-         width: 100%;
-         height: 5.5rem;
-         background-color: rgba(0, 0, 0, 0.5);
-         right: 0;
-     }
-     [card-token] {
-         display: none;
-     }
-     [card-month] {
-         width: 37%;
-     }
-     [card-year] {
-         width: 53%;
-         float: right;
-     }
-     [cardholder-container] {
-         width: 60%;
-         display: inline-block;
-     }
-     [cvc-container] {
-         box-sizing: border-box;
-         text-align: right;
-         /* display: inline-block; */
-     }
-     [card-button] {
-         border: 0.2rem solid white;
-         display: block;
-         padding: 1rem;
-         color: white;
-         float: right;
-         border-radius: 3rem;
-         background-color: $credit-card-color;
-     }
-     [next-button] {
-         margin-top: 2rem;
-     }
-     [save-button] {
-         border-radius: 50%;
-         font-weight: bold;
-         margin-top: -1rem;
-     }
-     [card-brand] {
-         float: left;
-         margin-left: 0.6rem;
-     }
-     [card-brand-select] {
-         width: 20.8rem;
-     }
-     [card-brand-pic] {
-         opacity: 0;
-         width: 4.2rem;
-         height: 2rem;
-         &[visible=true] {
-             opacity: 1;
-         }
-     }
-     [cvc-container] label {
-         width: 100%;
-     }
-     [cvc-container] p {
-         font-size: 0.8rem;
-         text-transform: uppercase;
-         letter-spacing: 0.05rem;
-         color: white;
-         font-weight: bold;
-         span {
-             max-width: 80px;
-             display: inline-block;
-             padding-top: 0.5rem;
-         }
-     }
-     [exp-container] {
-         margin-left: 1rem;
-         width: 32%;
-         display: inline-block;
-     }
-     input,
-     select {
-         border: none;
-         outline: none;
-         background-color: white;
-         font-weight: bold;
-         height: 3rem;
-         line-height: 3rem;
-         padding: 0 1rem;
-         margin: 0 0 0.8rem;
-         color: $credit-card-color;
-         font-size: 1rem;
-         box-sizing: border-box;
-         border-radius: 0.4rem;
-         letter-spacing: 0.07rem;
-     }
-     select {
-         padding: 0rem;
-         text-align: center;
-         option {
-             background-color: white;
-             font-weight: bold;
-             color: #444;
-         }
-     }
-     input::-webkit-input-placeholder {
-         /* Chrome/Opera/Safari */
-         color: lighten($secondary-cc-color, 20%);
-     }
-     input::-moz-placeholder {
-         /* Firefox 19+ */
-         color: lighten($secondary-cc-color, 20%);
-     }
-     input:-ms-input-placeholder {
-         /* IE 10+ */
-         color: lighten($secondary-cc-color, 20%);
-     }
-     input:-moz-placeholder {
-         /* Firefox 18- */
-         color: lighten($secondary-cc-color, 20%);
-     }
-     label {
-         display: block;
-         margin: 0 auto 0.7rem;
-         color: white;
-         font-size: 1rem;
-         font-weight: bold;
-         text-transform: uppercase;
-     }
-     [card-extra-info] {
-         input {
-             margin-bottom: 0rem;
-         }
-         [field] {
-             display: inline-block;
-             margin-right: 1.5%;
-             margin-left: 1.5%;
-             width: 46%;
-             height: 6rem;
-             &[full-width] {
-                 width: 100%;
-             }
-             select {
-                 width: 100%;
-             }
-             &[email] {
-                 label,
-                 input {
-                     display: inline-block;
-                 }
-                 label {
-                     width: 20%;
-                 }
-                 input {
-                     width: 75%;
-                 }
-             }
-         }
-     }
- }
+$credit-card-color: #1e88e5;
+$secondary-cc-color: adjust-hue($credit-card-color, -5);
+[credit-card] {
+  padding-bottom: 2.5rem;
+  max-width: 400px;
+  margin: auto;
+  * {
+    transition-property: all;
+    transition-duration: 0.3s;
+  }
+  [card-cvc] {
+    width: 6rem;
+    margin-bottom: 0;
+  }
+  [card-front],
+  [card-back] {
+    background: $credit-card-color;
+    /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      $credit-card-color 0%,
+      $secondary-cc-color 100%
+    );
+    /* FF3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, $credit-card-color),
+      color-stop(100%, $secondary-cc-color)
+    );
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(
+      top,
+      $credit-card-color 0%,
+      $secondary-cc-color 100%
+    );
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      top,
+      $credit-card-color 0%,
+      $secondary-cc-color 100%
+    );
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(
+      top,
+      $credit-card-color 0%,
+      $secondary-cc-color 100%
+    );
+    /* IE10+ */
+    background: linear-gradient(
+      to bottom,
+      $credit-card-color 0%,
+      $secondary-cc-color 100%
+    );
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+    min-width: 320px;
+    max-width: 400px;
+    min-height: 230px;
+    border-radius: 0.6rem;
+    padding: 2rem 3rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: white;
+    box-shadow: 1px 1px 0.2rem rgba(0, 0, 0, 0.2);
+  }
+  [card-front] {
+    z-index: 999;
+    margin-top: -25rem;
+    margin-left: -2rem;
+  }
+  [card-back] {
+    z-index: -2;
+    padding: 0rem;
+    padding-top: 2rem;
+    margin-right: -2rem;
+  }
+  [card-number],
+  [card-holder] {
+    width: 100%;
+  }
+  [card-stripe] {
+    width: 100%;
+    height: 5.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+  }
+  [card-token] {
+    display: none;
+  }
+  [card-month] {
+    width: 37%;
+  }
+  [card-year] {
+    width: 53%;
+    float: right;
+  }
+  [cardholder-container] {
+    width: 60%;
+    display: inline-block;
+  }
+  [cvc-container] {
+    box-sizing: border-box;
+    text-align: right;
+    /* display: inline-block; */
+  }
+  [card-button] {
+    border: 0.2rem solid white;
+    display: block;
+    padding: 1rem;
+    color: white;
+    float: right;
+    border-radius: 3rem;
+    background-color: $credit-card-color;
+  }
+  [next-button] {
+    margin-top: 2rem;
+  }
+  [save-button] {
+    border-radius: 50%;
+    font-weight: bold;
+    margin-top: -1rem;
+  }
+  [card-brand] {
+    float: left;
+    margin-left: 0.6rem;
+  }
+  [card-brand-select] {
+    width: 20.8rem;
+  }
+  [card-brand-pic] {
+    opacity: 0;
+    width: 4.2rem;
+    height: 2rem;
+    &[visible="true"] {
+      opacity: 1;
+    }
+  }
+  [cvc-container] label {
+    width: 100%;
+  }
+  [cvc-container] p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: white;
+    font-weight: bold;
+    span {
+      max-width: 80px;
+      display: inline-block;
+      padding-top: 0.5rem;
+    }
+  }
+  [exp-container] {
+    margin-left: 1rem;
+    width: 32%;
+    display: inline-block;
+  }
+  input,
+  select {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-weight: bold;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    margin: 0 0 0.8rem;
+    color: $credit-card-color;
+    font-size: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    letter-spacing: 0.07rem;
+  }
+  select {
+    padding: 0rem;
+    text-align: center;
+    option {
+      background-color: white;
+      font-weight: bold;
+      color: #444;
+    }
+  }
+  input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: lighten($secondary-cc-color, 20%);
+  }
+  input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: lighten($secondary-cc-color, 20%);
+  }
+  input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: lighten($secondary-cc-color, 20%);
+  }
+  input:-moz-placeholder {
+    /* Firefox 18- */
+    color: lighten($secondary-cc-color, 20%);
+  }
+  label {
+    display: block;
+    margin: 0 auto 0.7rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  [card-extra-info] {
+    input {
+      margin-bottom: 0rem;
+    }
+    [field] {
+      display: inline-block;
+      margin-right: 1.5%;
+      margin-left: 1.5%;
+      width: 46%;
+      height: 6rem;
+      &[full-width] {
+        width: 100%;
+      }
+      select {
+        width: 100%;
+      }
+      &[email] {
+        label,
+        input {
+          display: inline-block;
+        }
+        label {
+          width: 20%;
+        }
+        input {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
