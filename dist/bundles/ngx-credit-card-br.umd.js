@@ -108,11 +108,11 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
     /** @type {?} */
     var moment = moment_;
-    var NgxCreditCardBrComponent = (function () {
+    var NgxCreditCardBrComponent = /** @class */ (function () {
         function NgxCreditCardBrComponent(changeDetector) {
             this.changeDetector = changeDetector;
         }
@@ -207,11 +207,11 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
     /** @type {?} */
     var Component = [NgxCreditCardBrComponent];
-    var NgxCreditCardBrModule = (function () {
+    var NgxCreditCardBrModule = /** @class */ (function () {
         function NgxCreditCardBrModule() {
         }
         NgxCreditCardBrModule.decorators = [
@@ -226,12 +226,12 @@
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
 
     /**
      * @fileoverview added by tsickle
-     * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
 
     exports.NgxCreditCardBrComponent = NgxCreditCardBrComponent;
