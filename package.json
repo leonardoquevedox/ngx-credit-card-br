@@ -1,6 +1,6 @@
 {
   "name": "ngx-credit-card-br",
-  "version": "1.0.0-rc21",
+  "version": "1.0.0-rc24",
   "description": "Simple credit card component for Angular.io (2+).",
   "main": "index.js",
   "scripts": {
